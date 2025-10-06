@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* :root {
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+} */
+
+.wrapper
+{   height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container
+{
+    /* height: 400px;
+    width: 300px;
+    background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#passwordtoptext
+{
+    font-size: 1.8rem;
+    font-weight:700;
+    opacity: .9;
+    color: white;
+}
+
+.passwordisplaysection
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.1rem;
+    /* background-color: #050C9C; */
+    background-color: #201658;
+    height: 4rem;
+    width: 25rem;
+    border-radius: .9rem;
+    border-bottom:4px solid #E6C767;
+    position: relative;
+}
+
+.passwordisplaysection input
+{  
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 70%;
+    text-transform: uppercase;
+    display: flex;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.passwordisplaysection input::placeholder
+{
+    color: #E6C767;
+    font-size: 1.7rem;
+}
+
+.passwordisplaysection button
+{   
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    right: 1.5rem;
+    bottom: 1.5rem;
+
+}
+
+.copymessage
+{ 
+    position: absolute;
+    top: -1.5rem;
+    right: .3rem;
+    background-color:#E6C767;
+    height: 2rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    transform: scale(0);
+    transition: transform .5s ease-in-out ;
+
+}
+
+.active
+{
+    transform: scale(1);
+}
+
+
+.passwordsettingsection
+{
+    width: 25rem;
+    height: 28rem;
+    background-color:#201658 ;
+    border-radius: .9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 1.5rem;
+    border-bottom: 4px solid #E6C767;
+    
+}
+
+.passwordlengthsection
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwordlengthsection p:nth-child(1)
+{
+   font-weight: 500;
+   color: white;
+   font-size: 1.2rem;
+}
+
+.passwordlengthsection p:nth-child(2)
+{
+   font-weight: 500;
+   color:#E6C767;
+   font-size: 1.5rem;
+}
+
+/* slider */
+.slider
+{
+   appearance: none;
+   border-radius: 2rem;
+   width: 100%;
+   height: 0.8rem;
+   background-color: transparent;
+   background: linear-gradient(90deg, rgba(252,249,85,1) 67%, rgba(253,29,29,1) 100%);
+   position: relative;
+   cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb
+{   
+    appearance: none;
+    /* position: absolute; */
+    /* transform: ; */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #2193b0;
+    cursor: pointer;
+    margin-top: -15px; /* Centers the thumb on the track */
+}
+
+.slider::-webkit-slider-thumb:hover
+{
+    border:3px solid #E6C767;
+    background-color: #201658;
+    box-shadow: 0px 0px 25px 5px #E6C767;
+    
+}
+
+.slider:focus
+{
+   border: 2px solid rgb(252,249,85);
+}
+
+
+.strengthsection
+{
+    font-weight: 600;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+[indicatorbtn]
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: azure;
+}
+
+#GENERATEBUTTON
+{
+    appearance: none;
+    outline: none;
+    height: 4rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    border-radius:.8rem ;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom: 8px solid #E6C767    
+    
+}
+
+.checkboxessection
+{
+    display: flex;
+    flex-direction: column;
+    line-height:1.5rem;
+    gap: .5rem;
+}
+
+.allcheckboxes
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.allcheckboxes  input
+{
+   appearance: none;
+   position: relative;
+   height: 20px;
+   width: 20px;
+   border: 1px solid #E6C767;
+   border-radius: .2rem;
+}
+
+.allcheckboxes input:checked::before
+{   content: "✔";
+    position: absolute;
+    background-color: #6dd5ed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.allcheckboxes label
+{
+   color: white;
+   font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
